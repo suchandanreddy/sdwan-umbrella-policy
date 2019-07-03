@@ -157,7 +157,7 @@ Fetch number of DNS redirect packets using REST API resource URL : "statistics/u
 -   Create Umbrella Reporting API keys. 
 
 <pre>
-In Umbrella dashboard(https://dashboard.umbrella.com/o/<b>your-org-id</b>/#/overview) , to create Umbrella <br>Reporting API keys follow the path, Admin -> API Keys -> "+" (Create button icon at the top right corner of the screen) -> Select "Umbrella Reporting" -> Create.
+In Umbrella dashboard(https://dashboard.umbrella.com/o/<b>your-org-id</b>/#/overview) , to create Umbrella <br>Reporting API keys follow the path, Admin -> API Keys -> "+" (Create button icon at the top right <br>corner of the screen) -> Select "Umbrella Reporting" -> Create.
 </pre>
 
 -  Copy the API key and secret to your code environment. (Please note for security reasons, Umbrella API secret would be shown only once right after creating the API keys)
