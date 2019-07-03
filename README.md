@@ -80,12 +80,12 @@ Attaching new device template
 Template push status is done
 ```
 
-- `configure-umbrella-policy.py` script does the below steps in sequence. 
+`configure-umbrella-policy.py` script does the below steps in sequence. 
 
-    - Fetch uuid of Device Template provided. 
-    - Fetch Feature Templates associated with this Device Template. 
-    - Fetch Umbrella token list-id
-    - Create a DNS Security Policy using below POST request payload.
+1. Fetch uuid of Device Template provided. 
+2. Fetch Feature Templates associated with this Device Template. 
+3. Fetch Umbrella token list-id
+4. Create a DNS Security Policy using below POST request payload.
 
 <pre>
 {"name":dnssecurity_policy_name,
@@ -101,8 +101,8 @@ Template push status is done
 </pre>
 
     
-    -   Create a Security Policy and attach the above DNS Security policy to it. 
-    -   Edit Device Template to attach the security policy and push it to the SDWAN edge router. 
+5.  Create a Security Policy and attach the above DNS Security policy to it. 
+6.  Edit Device Template to attach the security policy and push it to the SDWAN edge router. 
 
 
 
