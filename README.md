@@ -85,9 +85,26 @@ Template push status is done
     - Fetch uuid of Device Template provided. 
     - Fetch Feature Templates associated with this Device Template. 
     - Fetch Umbrella token list-id
-    - Create a DNS Security Policy
-    - Create a Security Policy and attach the above DNS Security policy to it. 
-    - Edit Device Template to attach the security policy and push it to the SDWAN edge router. 
+    - Create a DNS Security Policy using below POST request payload.
+
+<pre>
+{"name":dnssecurity_policy_name,
+           "type":"DNSSecurity",
+           "description":dnssecurity_policy_name,
+           "definition":{"localDomainBypassList":{},
+           "matchAllVpn":True,
+           "umbrellaDefault":True,
+           "localDomainBypassEnabled":False,
+           "dnsCrypt":True,
+           "umbrellaData":
+           {"ref":<b>your-umbrella-listId</b>}}}
+</pre>
+
+    
+    -   Create a Security Policy and attach the above DNS Security policy to it. 
+    -   Edit Device Template to attach the security policy and push it to the SDWAN edge router. 
+
+
 
 # Device configuration logs
 
