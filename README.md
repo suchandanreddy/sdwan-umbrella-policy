@@ -1,3 +1,5 @@
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/suchandanreddy/sdwan-umbrella-policy)
+
 # Objective 
 
 *   How to use vManage REST APIs to configure and monitor DNS Security (Umbrella) policy on SDWAN edge router. 
@@ -54,6 +56,31 @@ set device_template_name=BR2-CSR-1000v
 
 After setting the env variables, run the python script `configure-umbrella-policy.py`
 
+`configure-umbrella-policy.py` script does the below steps in sequence. 
+
+1. Fetch uuid of Device Template provided. 
+2. Fetch Feature Templates associated with this Device Template. 
+3. Fetch Umbrella token list-id
+4. Create a DNS Security Policy using below POST request payload.
+
+<pre>
+{"name":dnssecurity_policy_name,
+           "type":"DNSSecurity",
+           "description":dnssecurity_policy_name,
+           "definition":{"localDomainBypassList":{},
+           "matchAllVpn":True,
+           "umbrellaDefault":True,
+           "localDomainBypassEnabled":False,
+           "dnsCrypt":True,
+           "umbrellaData":
+           {"ref":<b>your-umbrella-listId</b>}}}
+</pre>
+
+**Note** Above POST request payload can be modified based on your  DNS Security policy config requirements. 
+    
+5.  Create a Security Policy and attach the DNS Security policy to it. 
+6.  Edit Device Template to attach the security policy and push it to the SDWAN edge router. 
+
 **Sample Response**
 
 ```
@@ -79,32 +106,6 @@ Attaching new device template
 
 Template push status is done
 ```
-
-`configure-umbrella-policy.py` script does the below steps in sequence. 
-
-1. Fetch uuid of Device Template provided. 
-2. Fetch Feature Templates associated with this Device Template. 
-3. Fetch Umbrella token list-id
-4. Create a DNS Security Policy using below POST request payload.
-
-<pre>
-{"name":dnssecurity_policy_name,
-           "type":"DNSSecurity",
-           "description":dnssecurity_policy_name,
-           "definition":{"localDomainBypassList":{},
-           "matchAllVpn":True,
-           "umbrellaDefault":True,
-           "localDomainBypassEnabled":False,
-           "dnsCrypt":True,
-           "umbrellaData":
-           {"ref":<b>your-umbrella-listId</b>}}}
-</pre>
-
-    
-5.  Create a Security Policy and attach the above DNS Security policy to it. 
-6.  Edit Device Template to attach the security policy and push it to the SDWAN edge router. 
-
-
 
 # Device configuration logs
 
