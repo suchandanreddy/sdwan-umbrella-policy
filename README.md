@@ -315,10 +315,6 @@ Umbrella dashboard statistics for website ntp.ubuntu.com
 
 -   For this demo, I have enabled umbrella policy to block Social Networking. 
 
--   Below is the screenshot when the client VM access the facebook.com 
-
-![facebook](images/facebook_deny.png)
-
 -   Below is the screenshot when the client VM access the malware site toknowall.com 
 
 ![toknowall](images/umbrella_deny.png)
