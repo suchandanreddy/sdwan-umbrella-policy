@@ -313,7 +313,11 @@ Umbrella dashboard statistics for website ntp.ubuntu.com
 
 **Webpage access screenshots**
 
--   For this demo, I have enabled umbrella policy to block Social Networking. 
+-   For this demo, I have enabled umbrella policy to block Social Networking and Religious category sites.
+
+-   Below is the screenshot when the client VM access the Religious category site. 
+
+![deny](images/jw_deny.png) 
 
 -   Below is the screenshot when the client VM access the malware site toknowall.com 
 
