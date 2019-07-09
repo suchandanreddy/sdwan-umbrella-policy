@@ -19,7 +19,7 @@ org_id = os.environ.get("org_id")
 
 if vmanage_host is None or vmanage_port is None or username is None or password is None or device_id is None or umbrella_key is None or umbrella_secret is None or org_id is None:
     print("For Windows Workstation, vManage details must be set via environment variables using below commands")
-    print("set vmanage_host=198.18.1.10")
+    print("set vmanage_host=10.10.10.10")
     print("set vmanage_port=443")
     print("set username=admin")
     print("set password=admin")
@@ -28,7 +28,7 @@ if vmanage_host is None or vmanage_port is None or username is None or password 
     print("set umbrella_secret=<your-umbrella-secret>")
     print("set org_id=<your-org-id>")
     print("For MAC OSX Workstation, vManage details must be set via environment variables using below commands")
-    print("export vmanage_host=198.18.1.10")
+    print("export vmanage_host=10.10.10.10")
     print("export vmanage_port=443")
     print("export username=admin")
     print("export password=admin")
@@ -156,7 +156,7 @@ destination_site = "facebook.com"
 
 print("\nUmbrella dashboard statistics for website facebook.com\n")
 
-url = "https://reports.api.umbrella.com/v1/organizations/%s/destinations/%s/activity?limit=10"%(org_id,destination_site)
+url = "https://reports.api.umbrella.com/v1/organizations/%s/destinations/%s/activity?limit=1"%(org_id,destination_site)
 
 fb_umbrella_reports = requests.get(url,auth=HTTPBasicAuth(umbrella_key,umbrella_secret))
 
