@@ -41,7 +41,7 @@ class rest_api_lib:
 
         base_url = 'https://%s:%s/'%(self.vmanage_host, self.vmanage_port)
 
-        login_action = '/j_security_check'
+        login_action = 'j_security_check'
 
         #Format data for loginForm
         login_data = {'j_username' : username, 'j_password' : password}
@@ -55,11 +55,10 @@ class rest_api_lib:
         #If the vmanage has a certificate signed by a trusted authority change verify to True
 
         login_response = sess.post(url=login_url, data=login_data, verify=False)
-
-    
+        
         if b'<html>' in login_response.content:
             print ("Login Failed")
-            sys.exit(0)
+            exit(0)
 
         self.session[vmanage_host] = sess
 
