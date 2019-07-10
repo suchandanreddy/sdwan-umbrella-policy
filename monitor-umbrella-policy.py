@@ -71,7 +71,7 @@ class rest_api_lib:
 
         if b'<html>' in login_response.content:
             print ("Login Failed")
-            sys.exit(0)
+            exit(0)
 
         self.session[vmanage_host] = sess
 
