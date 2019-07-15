@@ -326,7 +326,7 @@ Umbrella dashboard statistics for website ntp.ubuntu.com
 
 # Credits
 
-Help sought and recieved from Stuart Clark (stuaclar@cisco.com) on ideating 
+Help sought and recieved from Stuart Clark (stuaclar@cisco.com, GitHub id: bigevilbeard) on ideating 
 
 # References
 
