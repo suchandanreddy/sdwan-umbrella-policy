@@ -324,6 +324,10 @@ Umbrella dashboard statistics for website ntp.ubuntu.com
 ![toknowall](images/umbrella_deny.png)
 
 
+# Credits
+
+Help sought and recieved from Stuart Clark (stuaclar@cisco.com) on ideating 
+
 # References
 
 [Umbrella Reporting APIs](https://docs.umbrella.com/umbrella-api/docs/overview)
